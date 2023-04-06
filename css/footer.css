@@ -1,0 +1,96 @@
+
+@charset "utf-8";
+
+/* footer */
+
+/* f_b_bg */
+#f_b_bg{
+    width:100%; 
+    background: pink;
+}
+
+#f_bottom{
+    padding:40px 0; 
+    display:flex; 
+    justify-content: space-between;
+}
+
+
+/* f_b_left */
+#f_b_left p{
+    margin-bottom: 8px; 
+    display:flex; 
+    align-items: center;
+}
+
+#f_b_left p:nth-child(1),
+#f_b_left p:nth-child(4) {
+    margin-bottom: 30px;
+}
+
+#f_b_left p a,
+#f_b_left p span{
+    color:#848485; 
+    font-size:15px;
+}
+
+#f_b_left p a::after,
+#f_b_left p span::after {
+    content:''; 
+    display:inline-block; 
+    width:1px; 
+    height:15px; 
+    transform:translateY(2px);
+    background:#848485; 
+    margin:0 6px; 
+    opacity:0.5;
+}
+
+#f_b_left p a:last-child::after,
+#f_b_left p span:last-child::after,
+#f_b_left p:last-child span::after {
+    display:none;
+}
+
+
+/* f_b_right */
+#f_b_right{
+    display:flex; 
+    flex-flow:column nowrap; 
+    justify-content: space-between;
+}
+
+#f_b_right select,
+#f_b_right select option{
+    background:transparent; 
+    color:#848485;
+}
+
+#f_b_right #sns {
+    display:flex;
+}
+
+#f_b_right #sns a {
+    margin-left:16px;
+    text-indent:-9999px; 
+    width:26px; 
+    height:26px
+}
+
+#f_b_right #sns a:first-child {
+    margin:0;
+}
+
+#f_b_right #sns a:nth-child(1) {
+    background-image: url(../images/top/search.png);
+}
+
+#f_b_right #sns a:nth-child(2) {
+    background-image: url(../images/top/search.png);
+    /* background-image: url(../images/footer/twitter.png); */
+}
+
+#f_b_right #sns a:nth-child(3) {
+    background-image: url(../images/top/search.png);
+    /* background-image: url(../images/footer/facebook.png); */
+}

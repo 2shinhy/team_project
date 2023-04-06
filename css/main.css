@@ -1,0 +1,404 @@
+
+@charset "utf-8";
+
+/* 공통 main h2 */
+main h2{
+    font-size:24px; 
+    font-weight: 500; 
+    margin-bottom:32px;
+}
+
+/* 공통 poster */
+.movie .poster{
+    width:100%; 
+    padding-bottom:142.85%; 
+    border-radius:5px; 
+    overflow:hidden; 
+    border:1px solid #ddd;
+    position:relative; 
+}
+
+.movie .poster p{
+    position:absolute;
+}
+
+.movie .poster .photo{
+    top:0; 
+    left:0; 
+    width:100%; 
+}
+
+.movie .poster .photo img{
+    width:100%; 
+    transform: scale(1.02); 
+    transition:all 0.5s;
+}
+
+.movie .poster .photo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* 공통 info */
+.movie .info {
+    margin-top:12px;
+}
+.movie .info h3 {
+    font-weight:500;
+}
+.movie .info p {
+    margin-top:7px; 
+    font-size:0.750rem; 
+    color:#737373;
+}
+
+.movie .info p span {
+    font-size:0.813rem; 
+    color:#737373;
+}
+
+.movie .info p span{
+    margin-right:3px;
+}
+
+
+
+/* �댁쟾 �ㅼ쓬 踰꾪듉 怨듯넻 */
+/* btn�대옒�� 遺�紐⑦깭洹몄뿉 position:relative */
+#r1_bg  #r1_t10,
+#r3_bg #r3_story,
+#r4_actor {
+    position:relative;
+}
+
+.btn {
+    width:36px; 
+    height:36px;
+    position:absolute; 
+    z-index:800;  
+    top:calc(50% - 18px);
+    opacity:0.8; 
+    transform:scale(.9); 
+    transition:all 0.4s;
+    display:flex; 
+    justify-content: center; 
+    align-items: center;
+    background: #fff; 
+    border-radius: 50%; 
+    border:1px solid #ccc;
+}
+
+.btn:hover {
+    transform:scale(1);
+}
+
+.prev_btn {
+    left:18px;
+}
+
+.next_btn {
+    right:18px;
+}
+
+.btn img {
+    transition:.3s;
+}
+
+
+/* r1_bg */
+#r1_bg {
+    background: #f2f2f2;
+}
+
+#r1_t10{
+    padding:80px 0; 
+}
+
+#r1_t10 h2{
+    text-indent:8px;
+}
+
+#r1_list{
+    overflow: hidden;
+}
+
+.r1_list_container{
+    display:flex; 
+    justify-content:space-between;
+    position:relative; 
+    width:200%;  /* 어떻게 200%인지 알아보기 */
+    left:0; 
+    transition:.5s; /* 아마 js에서 필요한 아이겠지? */
+}
+
+.r1_list_container .movie{
+    flex:1; 
+    margin:0 8px;
+}
+
+.poster p:last-child { /* js createElement */
+    width:32px; 
+    height:32px; 
+    border-radius:4px; 
+    background:#333; 
+    color:#fff;
+    top:6px; 
+    left:6px; 
+    text-align:center; 
+    line-height:32px; 
+    font-size:1.25rem;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight:500;
+    mix-blend-mode:luminosity;
+}
+main #r1_bg #r1_t10 .prev_btn {
+    left:-8px; 
+    display:none;
+}
+
+main #r1_bg #r1_t10 .next_btn {
+    right:-8px;
+}
+
+
+
+/* r2_comment */
+main #r2_comment {
+    padding:80px 0;
+}
+
+main #r2_comment #r2_list {
+    display:flex; 
+    justify-content: space-between;
+}
+
+main #r2_comment #r2_list .r2_movie {
+    display: flex; 
+    flex-flow:row nowrap; 
+    justify-content: space-between;
+    align-items:center; 
+    width:48%;
+}
+
+main #r2_comment #r2_list .r2_movie .movie {
+    width:45%;
+}
+
+main #r2_comment #r2_list .r2_movie .comment {
+    width:50%;
+}
+
+main #r2_comment #r2_list .r2_movie .comment p {
+    margin-bottom:20px;
+}
+
+main #r2_comment #r2_list .r2_movie .comment p:last-child {
+    margin:0;
+}
+
+main #r2_comment #r2_list .r2_movie .comment .star {
+    display:flex;
+}
+
+main #r2_comment #r2_list .r2_movie .comment .star span {
+    width:14px; 
+    height:13px;
+}
+
+main #r2_comment #r2_list .r2_movie .comment .star .full {
+    background-image:url(../images/icon/star_full.png);
+}
+
+main #r2_comment #r2_list .r2_movie .comment .star .half {
+    background-image:url(../images/icon/star_half.png);
+}
+
+main #r2_comment #r2_list .r2_movie .comment .star .empty {
+    background-image:url(../images/icon/star_empty.png);
+}
+
+main #r2_comment #r2_list .r2_movie .comment .c_txt {
+    font-size:1.25rem; 
+    font-weight: 500; 
+    letter-spacing: -0.02em; 
+    word-break:keep-all; 
+    line-height:1.3;
+}
+
+main #r2_comment #r2_list .r2_movie .comment .name {
+    color:#737373; 
+    font-size:0.813rem;
+}
+
+main #r2_comment #r2_list .r2_movie .comment .likes {
+    display:flex; 
+    align-items: center;
+}
+
+main #r2_comment #r2_list .r2_movie .comment .likes .thumb_icon {
+    width:16px; 
+    height:16px; 
+    margin-right:8px;
+    background-size: cover; 
+    background-image: url(../images/icon/icon_thumb.svg);
+}
+
+main #r2_comment #r2_list .r2_movie .comment .likes .likes_num {
+    color:#737373; 
+    font-size:0.813rem; 
+    font-weight:500;
+}
+
+
+/* r5 */
+main #r5_bg{
+    background: #f2f2f2; 
+    width:100%;
+}
+
+main #r5_bg #r5_collection{
+    padding:100px 0;
+}
+
+main #r5_bg #r5_collection #r5_list{
+    width:100%; 
+    display:flex; 
+    justify-content: space-between;
+}
+
+main #r5_bg #r5_collection #r5_list .c_box{
+    width:254px; 
+    height:364px;
+    box-shadow:8px 8px 15px rgba(0,0,0,0.3);
+    border-radius:7px; 
+    overflow: hidden;
+    position:relative;
+} 
+
+main #r5_bg #r5_collection #r5_list .c_box .name{
+    position:absolute;
+    background: #151515;
+    width:100%; 
+    height:100%;
+	word-break: keep-all; 
+    text-align: center;
+    opacity:0;
+    transition:all 0.4s;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+main #r5_bg #r5_collection #r5_list .c_box .active,
+main #r5_bg #r5_collection #r5_list .c_box .name:hover{
+    opacity:0.9;
+}
+
+main #r5_bg #r5_collection #r5_list .c_box .name span{
+    width:50%;
+    color:#f2f2f2; 
+    font-weight:500; 
+    line-height:1.5;
+}
+
+main #r5_bg #r5_collection #r5_list .c_box .list{
+    background: #f5f5f5;
+    width:100%; 
+    height:100%; 
+    padding:5px;
+    display:flex; 
+    flex-flow:row wrap; 
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+main #r5_bg #r5_collection #r5_list .c_box .list span{
+    width:49%; 
+    height:49.5%; 
+    border-radius: 5px;
+    background-size: cover; 
+    background-position: center;
+    box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+/* r5 baground-img */
+.c_box:nth-child(1) .list span:nth-child(1) {
+    background-image: url(../images/main/book/book1_1.jfif);
+}
+
+.c_box:nth-child(1) .list span:nth-child(2) {
+    background-image: url(../images/main/book/book1_2.jfif);
+}
+
+.c_box:nth-child(1) .list span:nth-child(3) {
+    background-image: url(../images/main/book/book1_3.jfif);
+}
+
+.c_box:nth-child(1) .list span:nth-child(4) {
+    background-image: url(../images/main/book/book1_4.jfif);
+}
+
+.c_box:nth-child(2) .list span:nth-child(1) {
+    background-image: url(../images/main/book/book2_1.jfif);
+}
+
+.c_box:nth-child(2) .list span:nth-child(2) {
+    background-image: url(../images/main/book/book2_2.jfif);
+}
+
+.c_box:nth-child(2) .list span:nth-child(3) {
+    background-image: url(../images/main/book/book2_3.jfif);
+}
+
+.c_box:nth-child(2) .list span:nth-child(4) {
+    background-image: url(../images/main/book/book2_4.jfif);
+}
+
+.c_box:nth-child(3) .list span:nth-child(1) {
+    background-image: url(../images/main/book/book3_1.jfif);
+}
+
+.c_box:nth-child(3) .list span:nth-child(2) {
+    background-image: url(../images/main/book/book3_2.jfif);
+}
+
+.c_box:nth-child(3) .list span:nth-child(3) {
+    background-image: url(../images/main/book/book3_3.jfif);
+}
+
+.c_box:nth-child(3) .list span:nth-child(4) {
+    background-image: url(../images/main/book/book3_4.jfif);
+}
+
+.c_box:nth-child(4) .list span:nth-child(1) {
+    background-image: url(../images/main/book/book4_1.jfif);
+}
+
+.c_box:nth-child(4) .list span:nth-child(2) {
+    background-image: url(../images/main/book/book4_2.jfif);
+}
+
+.c_box:nth-child(4) .list span:nth-child(3) {
+    background-image: url(../images/main/book/book4_3.jfif);
+}
+
+.c_box:nth-child(4) .list span:nth-child(4) {
+    background-image: url(../images/main/book/book4_4.jfif);
+}
+
+.c_box:nth-child(5) .list span:nth-child(1) {
+    background-image: url(../images/main/book/book5_1.jfif);
+}
+
+.c_box:nth-child(5) .list span:nth-child(2) {
+    background-image: url(../images/main/book/book5_2.jfif);
+}
+
+.c_box:nth-child(5) .list span:nth-child(3) {
+    background-image: url(../images/main/book/book5_3.jfif);
+}
+
+.c_box:nth-child(5) .list span:nth-child(4) {
+    background-image: url(../images/main/book/book5_4.jfif);
+}
