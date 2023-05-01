@@ -9,28 +9,29 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="css/reset.css"><!-- 1 reset -->
-    <link rel="stylesheet" href="css/top.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/index.css"><!-- 2 desktop css -->
-    <link rel="stylesheet" href="css/hihi.css"><!-- 3 table, mobile css -->
+    <link rel="stylesheet" href="css/reset.css"><!-- reset -->
+    <link rel="stylesheet" href="css/index.css"><!-- 세팅 css -->
+    <link rel="stylesheet" href="css/top.css"><!-- 메뉴바 css -->
+    <link rel="stylesheet" href="css/main.css"><!-- 컨텐츠 css -->
+    <link rel="stylesheet" href="css/footer.css"><!-- 하단 css -->
+    <link rel="stylesheet" href="css/hihi.css"><!-- 반응형 css -->
 </head>
 <body>
     <header>
-        <div id="h_t_bg">
+        <div id="h_bg">
+
             <div id="h_top">
 
-                <div id="h_t_left">
+                <div id="h_left">
                     <h1><a href="#">TVING</h1>
                     <nav>
-                        <ul id="dep1">
+                        <ul id="part1">
                             <li>
                                 <a href="#!" class="nowPage">영화</a>
-                                <ul class="dep2">
+                                <ul class="part2">
                                     <li>
                                         <a href="#!">장르</a>
-                                        <ul class="dep3">
+                                        <ul class="part3">
                                             <li><a href="#">느와르</a></li>
                                             <li><a href="#">슈퍼 히어로</a></li>
                                             <li><a href="#">범죄</a></li>
@@ -47,26 +48,26 @@
                                     </li>
                                     <li>
                                         <a href="#">랭킹</a>
-                                        <ul class="dep3">
+                                        <ul class="part3">
                                             <li><a href="#">전문가 고평점 영화</a></li>
                                             <li><a href="#">예상 별점 높은 영화</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <a href="#">커뮤니티</a>
-                                        <ul class="dep3">
+                                        <ul class="part3">
                                             <li><a href="#">코멘트</a></li>
                                             <li><a href="#">컬렉션</a></li>
                                         </ul>
                                     </li>
-                                </ul><!--dep2-->
+                                </ul><!--part2-->
                             </li>
                             <li>
                                 <a href="#">TV 프로그램</a>
-                                <ul class="dep2">
+                                <ul class="part2">
                                     <li>
                                         <a href="#">장르</a>
-                                        <ul class="dep3">
+                                        <ul class="part3">
                                             <li><a href="#">드라마</a></li>
                                             <li><a href="#">판타지</a></li>
                                             <li><a href="#">호러</a></li>
@@ -86,7 +87,7 @@
                                     </li>
                                     <li>
                                         <a href="#">국가</a>
-                                        <ul class="dep3">
+                                        <ul class="part3">
                                             <li><a href="#">한국</a></li>
                                             <li><a href="#">미국</a></li>
                                             <li><a href="#">영국</a></li>
@@ -102,10 +103,10 @@
                             </li>
                             <li>
                                 <a href="#">키즈</a>
-                                <ul class="dep2">
+                                <ul class="part2">
                                     <li>
                                         <a href="#">연령대</a>
-                                        <ul class="dep3">
+                                        <ul class="part3">
                                             <li><a href="#">0~1세</a></li>
                                             <li><a href="#">1~3세</a></li>
                                             <li><a href="#">3~5세</a></li>
@@ -119,10 +120,10 @@
                             </li>
                             <li>
                                 <a href="#">실시간</a>
-                                <ul class="dep2">
+                                <ul class="part2">
                                     <li>
                                         <a href="#">장르</a>
-                                        <ul class="dep3">
+                                        <ul class="part3">
                                             <li><a href="#">드라마</a></li>
                                             <li><a href="#">스릴러</a></li>
                                             <li><a href="#">스포츠</a></li>
@@ -136,17 +137,18 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul><!--dep1-->
+                        </ul><!--part1-->
 
-                        <div class="sub_bg dep2_bg"></div>
-                        <div class="sub_bg dep3_bg"></div>
+                        <div class="sub_bg part2_bg"></div>
+                        <div class="sub_bg part3_bg"></div>
                     </nav>
 
                     <div class="mobile_nav_bg"></div>
-                </div><!-- h_t_left -->
+                </div><!-- h_left -->
 
 
-                <div id="h_t_right">
+                <div id="h_right">
+
                     <form action="#" method="get" id="search_frm">
                         <fieldset>
                             <legend class="skip">검색양식</legend>
@@ -155,6 +157,7 @@
                         </fieldset>
                         <button type="button" class="close_btn">닫기</button><!-- mobile -->
                     </form>
+                    
                     <a href="#!" id="search_btn"><img src="images/top/search.png" alt="검색"></a>
                     <!-- mobile search -->
                     <a href="#!" id="menu_btn">
@@ -164,10 +167,10 @@
                     <!-- mobile menu -->
                     <a href="#!" id="login_btn">로그인</a>
                     <a href="#!" id="join_btn">회원가입</a>
-                </div><!-- h_t_right -->
+                </div><!-- h_right -->
 
             </div><!-- h_top -->
-        </div><!-- h_t_bg -->
+        </div><!-- h_bg -->
     </header>
 
 
@@ -495,7 +498,8 @@
 
     </footer>
     <!-- script -->
-    <script src="js/common.js"></script>
+    
+    <script src="js/top.js"></script>
     <script src="js/romance.js"></script>
 </body>
 </html>

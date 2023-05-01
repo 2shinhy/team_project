@@ -3,28 +3,28 @@
 //
 
 const nav = document.querySelector('nav')
-const dep1_menu = document.querySelectorAll('#dep1 > li')
-const dep2_menu = document.querySelectorAll('.dep2 > li')
-const dep2_bg = document.querySelector('.dep2_bg') 
-const dep3_bg = document.querySelector('.dep3_bg')
+const part1_menu = document.querySelectorAll('#part1 > li')
+const part2_menu = document.querySelectorAll('.part2 > li')
+const part2_bg = document.querySelector('.part2_bg') 
+const part3_bg = document.querySelector('.part3_bg')
 
 //1-1.
-dep1_menu.forEach(function(target,index){
+part1_menu.forEach(function(target,index){
     target.addEventListener('mouseover',function(){
         if(window.innerWidth > 780){
-            dep2_bg.style.display = 'block'
-            for(let i of dep1_menu){i.classList.remove('active')}
+            part2_bg.style.display = 'block'
+            for(let i of part1_menu){i.classList.remove('active')}
             target.classList.add('active')
         }
     })
 })
 
 //dep2 
-dep2_menu.forEach(function(target,index){
+part2_menu.forEach(function(target,index){
     target.addEventListener('mouseover',function(){
         if(window.innerWidth > 780){
-            dep3_bg.style.display = 'block' 
-            for(let i of dep2_menu){i.classList.remove('active')}
+            part3_bg.style.display = 'block' 
+            for(let i of part2_menu){i.classList.remove('active')}
             target.classList.add('active')
         }
     })
@@ -33,9 +33,9 @@ dep2_menu.forEach(function(target,index){
 //
 nav.addEventListener('mouseleave',function(){
     if(window.innerWidth > 780){    
-        allHide(dep2_bg); allHide(dep3_bg);
-        for(let i of dep1_menu){i.classList.remove('active')}
-        for(let i of dep2_menu){i.classList.remove('active')}
+        allHide(part2_bg); allHide(part3_bg);
+        for(let i of part1_menu){i.classList.remove('active')}
+        for(let i of part2_menu){i.classList.remove('active')}
     }
 })
 
@@ -66,13 +66,13 @@ m_menu_btn.addEventListener('click',function(){
         this.classList.remove('active') 
         nav.style.display = 'none'
         m_nav_bg.style.display = 'none'
-        for(let i of dep1_menu){i.classList.remove('active')}
-        for(let i of dep2_menu){i.classList.remove('active')}
+        for(let i of part1_menu){i.classList.remove('active')}
+        for(let i of part2_menu){i.classList.remove('active')}
     }
 })
 
 // dep1 
-dep1_menu.forEach(function(target,index){
+part1_menu.forEach(function(target,index){
     target.addEventListener('click',function(){
         if(window.innerWidth <= 780){
             target.classList.add('active')
@@ -80,7 +80,7 @@ dep1_menu.forEach(function(target,index){
     })
 })
 // dep2 
-dep2_menu.forEach(function(target,index){
+part2_menu.forEach(function(target,index){
     target.addEventListener('click',function(){
         if(window.innerWidth <= 780){
             target.classList.add('active')
@@ -107,39 +107,3 @@ search_close_btn.addEventListener('click',function(e){
     m_search_btn.classList.remove('active')
 })
 
-
-// 3.filter btn event
-
-const filter = document.querySelector('.filter')
-const filter_btn = document.querySelector('#filter_btn')
-const filter_reset_btn = document.querySelector('.filter .reset_btn')
-const ott = document.querySelectorAll('.ott_list span')
-let filter_close = true
-let ott_check = false
-
-filter_btn.addEventListener('click',function(){
-    if(filter_close){
-        filter_close = false
-        filter.classList.add('active')
-        this.classList.add('active')
-    }else{
-        filter_close = true
-        this.classList.remove('active')
-        filter.classList.remove('active')
-    }
-})
-
-for(let i of ott){
-    i.addEventListener('click',function(){
-        if(ott_check == false){
-            for(let j of ott){j.classList.add('active')}
-            ott_check = true
-        }
-        i.classList.remove('active')
-    })
-}
-
-filter_reset_btn.addEventListener('click',function(){
-    for(let i of ott){i.classList.remove('active')}
-    ott_check = false
-})
